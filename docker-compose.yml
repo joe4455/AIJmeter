@@ -1,0 +1,28 @@
+services:
+  jmeterjtp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jmeterJTP
+    image: jmeterjtp:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - "/home/ap/jmeterAI/jmeter_JTP_docker:/app"
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
+#      - "/home/ap/jmeterAI/apache-jmeter-5.6.3:/opt/apache-jmeter-5.6.3"
+
+    cpus: "4"
+    cpu_shares: 1024
+    mem_limit: "8g"
+    mem_reservation: "4g"
+    restart: unless-stopped
+    networks:
+      - jmeter_network
+
+networks:
+  jmeter_network:
+    driver: bridge

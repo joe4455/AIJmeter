@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入学评测 AI性能分析报告</title>
+    <script src="../../scripts/static/js/marked.min.js"></script>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .header-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .header-info .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 10px;
+        }
+        .header-info .info-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        .header-info .info-label {
+            font-weight: bold;
+            color: #495057;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        .section h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #007bff;
+        }
+        .analysis-content {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+        }
+        .analysis-content h1, .analysis-content h2, .analysis-content h3, .analysis-content h4, .analysis-content h5, .analysis-content h6 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .analysis-content h1 {
+            font-size: 24px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        .analysis-content h2 {
+            font-size: 20px;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 8px;
+        }
+        .analysis-content h3 {
+            font-size: 18px;
+        }
+        .analysis-content h4 {
+            font-size: 16px;
+        }
+        .analysis-content p {
+            margin-bottom: 15px;
+        }
+        .analysis-content ul, .analysis-content ol {
+            margin-bottom: 15px;
+            padding-left: 30px;
+        }
+        .analysis-content li {
+            margin-bottom: 8px;
+        }
+        .analysis-content strong {
+            font-weight: bold;
+            color: #333;
+        }
+        .analysis-content em {
+            font-style: italic;
+        }
+        .analysis-content code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .analysis-content pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+        .analysis-content pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        .analysis-content blockquote {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin: 15px 0;
+            color: #666;
+        }
+        .analysis-content table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .analysis-content th, .analysis-content td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .analysis-content th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+        .analysis-content tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .analysis-content tr:hover {
+            background-color: #f5f5f5;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>入学评测 AI性能分析报告</h1>
+        </div>
+        
+        <div class="header-info">
+            <div class="info-row">
+                <div class="info-item">
+                    <span class="info-label">分析时间:</span> 2026-02-08 17:06:27
+                </div>
+                <div class="info-item">
+                    <span class="info-label">原始报告:</span> 入学评测_summary_20260208_164001.html
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>分析摘要</h2>
+                <div class="analysis-content" id="markdown-content">
+                    <!-- Markdown内容将通过JavaScript渲染 -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <a href="入学评测_summary_20260208_164001.html" class="back-link">返回原始报告</a>
+            <p style="margin-top: 20px; font-size: 14px; color: #ccc;">报告生成时间: 2026-02-08 17:06:27</p>
+        </div>
+    </div>
+    <script>
+        // 使用marked.js渲染Markdown
+        document.addEventListener('DOMContentLoaded', function() {
+            const markdownContent = `好的，作为性能测试专家，我将对您提供的两份JMeter HTML报告进行对比分析，并给出专业的评估与建议。
+
+### **核心结论**
+
+这两份报告展示了**同一系统在两个不同负载或配置下的性能表现**。报告2的性能表现**远优于**报告1。报告1的系统处于**严重性能瓶颈**状态，而报告2则表现出**良好且稳定**的性能。
+
+---
+
+### **详细对比分析**
+
+#### **1. 整体性能评估 (APDEX指数)**
+
+*   **报告1 (APDEX: 0.365)**：这是一个**极差**的分数。APDEX在0-1之间，通常认为：
+    *   `>= 0.85` 优秀
+    *   `>= 0.70` 良好
+    *   `>= 0.55` 一般
+    *   `< 0.55` 差
+    *   **0.365** 意味着大部分用户的体验是“无法容忍”的，系统响应极慢。
+*   **报告2 (APDEX: 0.887)**：这是一个**优秀**的分数。表明绝大多数用户的体验是“满意”的，系统响应迅速。
+
+**结论**：从用户体验角度看，报告2的系统状态是报告1的**2.4倍以上**。
+
+#### **2. 关键性能指标 (KPI) 分析**
+
+| 指标 | 报告1 (性能差) | 报告2 (性能好) | 分析与解读 |
+| :--- | :--- | :--- | :--- |
+| **总样本数** | 2,213 | 8,066 | 报告2处理的请求量是报告1的**3.6倍**，但性能却更好，这非常关键。 |
+| **平均响应时间** | **1,418 ms** | **397 ms** | **核心差异**。报告1的平均响应时间过长，超过1秒，用户体验会明显感到“卡顿”。报告2的397ms属于良好范围。 |
+| **中位数** | 1,303 ms | **24 ms** | **最具揭示性的指标**。中位数表示一半的请求快于此值。报告2的中位数仅24ms，说明大部分请求**极快**。报告1的中位数依然高达1.3秒，证实了性能瓶颈的普遍性。 |
+| **90% / 95% 分位** | 2,659 ms / 2,849 ms | 1,695 ms / 3,274 ms | 报告1的尾部延迟（慢请求）非常糟糕，90%的请求都在2.6秒以上。报告2的90%请求在1.7秒内完成，但95%分位有跳升，提示存在**部分慢请求或资源争用**。 |
+| **吞吐量 (TPS)** | **95.8** | **332.4** | **最关键的容量指标**。报告2的系统吞吐能力是报告1的**3.5倍**。在更高的负载下（更多样本），实现了更高的处理速度。 |
+| **错误率** | 0% | 0% | 两者均未出现功能错误，这是一个积极信号，说明问题纯粹是性能瓶颈，而非系统崩溃。 |
+
+#### **3. 性能瓶颈推测**
+
+**报告1的性能瓶颈可能原因：**
+1.  **数据库连接池不足**：大量请求在等待获取数据库连接。
+2.  **应用服务器线程池耗尽**：请求在队列中等待可用线程处理。
+3.  **低效的SQL查询或代码逻辑**：未使用索引、全表扫描、循环嵌套等。
+4.  **外部服务调用超时**：依赖的第三方API或微服务响应缓慢。
+5.  **服务器资源耗尽**：测试期间CPU、内存、磁盘I/O达到100%。
+6.  **锁竞争激烈**：数据库行锁、表锁或应用级锁导致大量等待。
+7.  **JVM垃圾回收频繁**：Full GC导致应用长时间暂停。
+
+**报告2性能优异的原因（对比报告1）：**
+*   **可能优化了上述瓶颈**：例如，增加了连接池/线程池大小、优化了SQL、增加了服务器资源。
+*   **可能启用了缓存**：引入了Redis等缓存，极大减轻了数据库压力。
+*   **可能是不同的测试场景**：报告1测试的是一个复杂、耗时的业务接口，而报告2测试的是一个简单、静态的接口。**（需要结合具体“Label”标签确认）**
+*   **可能是不同的系统配置/环境**：报告1在性能较差的测试环境运行，报告2在生产或优化后的环境运行。
+
+---
+
+### **专业建议与后续步骤**
+
+1.  **立即行动 - 诊断报告1的问题**：
+    *   **查看资源监控**：获取测试期间的服务器（应用、数据库）**CPU、内存、磁盘I/O、网络I/O** 监控图表。
+    *   **分析慢查询日志**：检查数据库，找出执行时间最长的SQL语句并进行优化。
+    *   **检查应用日志**：查找是否有大量的超时、等待警告信息。
+    *   **分析GC日志**：检查JVM垃圾回收频率和暂停时间。
+
+2.  **深入分析报告2**：
+    *   **关注尾部延迟**：虽然整体优秀，但95%分位（3.2秒）和最大响应时间（4.3秒）仍然偏高。需要分析这些慢请求的具体原因，是特定数据导致，还是周期性的资源争用（如定时任务）。
+    *   **进行压力/极限测试**：在报告2的基础上，继续增加并发用户数，直到系统吞吐量不再增长或错误率上升，找到系统的**最大容量拐点**。
+
+3.  **测试方法建议**：
+    *   **明确测试场景**：确保两份报告测试的是**相同的接口、相同的测试数据**，否则对比失去意义。请提供具体的“Label”名称。
+    *   **进行对比测试**：在修复了报告1的瓶颈后，使用**相同的并发用户数、相同的测试脚本和数据集**重新测试，与原始报告1和报告2进行对比，量化优化效果。
+    *   **使用更细致的监听器**：在JMeter中添加 **`Response Times vs Threads`** 和 **`Transactions per Second`** 监听器，可以更直观地看到性能随负载的变化趋势。
+
+**总结**：报告1揭示了系统存在严重的、全局性的性能瓶颈，必须优先解决。报告2展示了系统具备良好的基准性能和扩展潜力，是性能优化的目标状态。下一步应聚焦于**找出并修复导致报告1与报告2之间巨大差距的根本原因**。`;
+            const htmlContent = marked(markdownContent);
+            document.getElementById('markdown-content').innerHTML = htmlContent;
+        });
+    </script>
+</body>
+</html>
