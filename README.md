@@ -72,7 +72,7 @@ jmeter压测平台，性能测试和压力测试的平台，基于Jmeter实现�
 # 联系
 
 email： joe45@live.com
-qq：
+qq：30258823
 #####
 wechat：jojo45
 
